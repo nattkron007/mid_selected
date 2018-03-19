@@ -1,0 +1,11 @@
+<stacklayout>
+        <SearchBar hint="Search hint" [text]="searchPhrase" (textChange)="onSubmit($event)"></SearchBar>
+    <ListView [items]="myList">
+            <ng-template let-item="item">
+                <StackLayout>
+                    <Label [text]='"[" + item.id +"] " + item.province'></Label>
+                    <Label [text]='item.all_income_house'></Label>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+</stacklayout>
